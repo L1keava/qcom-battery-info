@@ -26,7 +26,10 @@ else
 fi
 
 if [ "$bat_design" != "获取失败" ];then
-	bat_design=$(echo "scale=1; $bat_design/1000" | bc)
+	bat_design=$(echo "scale=2; $bat_design/1000" | bc)
+    if [ $bat_design != "0" ];then
+        bat_capacity=$(echo "scale=0; $bat_design*0.$bat_percentage" | bc)
+    fi
 fi
 
 if [ "$bat_health" == "Good" ];then
@@ -39,4 +42,5 @@ echo "你的电池状态信息为："
 echo "当前状态：$bat_status"
 echo "当前电量：$bat_percentage %"
 echo "设计容量：$bat_design mAh"
+echo "实时容量：$bat_capacity mAh"
 echo "电池健康：$bat_health"
