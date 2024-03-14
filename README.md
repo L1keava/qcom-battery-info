@@ -1,2 +1,7 @@
 # qcom-battery-info
-battery info for qualcomm devices. For test only.
+## 适用于高通设备的电池信息shell脚本
+在搭载PostmarketOS的小米设备上工作正常
+此脚本不具备获取电池信息功能 仅仅是读取系统文件
+整理数据 并输出显示
+
+拙作奉上,深感不安,请不吝赐教。
